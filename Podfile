@@ -1,0 +1,6 @@
+pod 'Parse', '1.8.1'
+pod 'ParseUI'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
+pod 'FlatUIKit'
