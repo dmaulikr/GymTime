@@ -26,6 +26,7 @@
 		83EA8F451C3475220093BDCA /* glyphicons-357-dumbbell.png in Resources */ = {isa = PBXBuildFile; fileRef = 83EA8F441C3475220093BDCA /* glyphicons-357-dumbbell.png */; };
 		83EA8F471C3475670093BDCA /* glyphicons-42-charts.png in Resources */ = {isa = PBXBuildFile; fileRef = 83EA8F461C3475670093BDCA /* glyphicons-42-charts.png */; };
 		83EA8F491C3475C50093BDCA /* glyphicons-715-user-structure.png in Resources */ = {isa = PBXBuildFile; fileRef = 83EA8F481C3475C50093BDCA /* glyphicons-715-user-structure.png */; };
+		83EA8F4E1C34D6FD0093BDCA /* glyphicons-21-home.png in Resources */ = {isa = PBXBuildFile; fileRef = 83EA8F4D1C34D6FD0093BDCA /* glyphicons-21-home.png */; };
 		B7CAB28B79FAA471F6AAF38E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3E51104BF2447DB40BF6BB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		83EA8F441C3475220093BDCA /* glyphicons-357-dumbbell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-357-dumbbell.png"; sourceTree = "<group>"; };
 		83EA8F461C3475670093BDCA /* glyphicons-42-charts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-42-charts.png"; sourceTree = "<group>"; };
 		83EA8F481C3475C50093BDCA /* glyphicons-715-user-structure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-715-user-structure.png"; sourceTree = "<group>"; };
+		83EA8F4D1C34D6FD0093BDCA /* glyphicons-21-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-21-home.png"; sourceTree = "<group>"; };
 		D553E3DCCC8FC66185ABA1ED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FA3E51104BF2447DB40BF6BB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -222,6 +224,7 @@
 		83EA8F411C3474A50093BDCA /* Glyphicons */ = {
 			isa = PBXGroup;
 			children = (
+				83EA8F4D1C34D6FD0093BDCA /* glyphicons-21-home.png */,
 				83EA8F481C3475C50093BDCA /* glyphicons-715-user-structure.png */,
 				83EA8F461C3475670093BDCA /* glyphicons-42-charts.png */,
 				83EA8F441C3475220093BDCA /* glyphicons-357-dumbbell.png */,
@@ -329,6 +332,7 @@
 				83EA8F431C3474B60093BDCA /* glyphicons-40-notes.png in Resources */,
 				833B322A1C2B87CB007F0B72 /* Main.storyboard in Resources */,
 				833B322F1C2B87CB007F0B72 /* LaunchScreen.xib in Resources */,
+				83EA8F4E1C34D6FD0093BDCA /* glyphicons-21-home.png in Resources */,
 				83EA8EF31C2C8C9F0093BDCA /* Splash_Screen.jpg in Resources */,
 				833B322C1C2B87CB007F0B72 /* Images.xcassets in Resources */,
 			);

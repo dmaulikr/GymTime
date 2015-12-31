@@ -29,7 +29,6 @@
 
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    NSLog(@"calling this function");
     return endingValue - startingValue + 1;
 }
 

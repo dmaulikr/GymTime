@@ -162,35 +162,113 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="pue-uh-cUr">
-                                <rect key="frame" x="176" y="172" width="52" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="170" borderStyle="roundedRect" minimumFontSize="17" id="pue-uh-cUr">
+                                <rect key="frame" x="183" y="202" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Weight:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M3D-zb-hI5">
-                                <rect key="frame" x="48" y="176" width="120" height="21"/>
+                                <rect key="frame" x="48" y="206" width="120" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hto-tT-F14" customClass="FUIButton">
-                                <rect key="frame" x="92" y="431" width="136" height="30"/>
+                                <rect key="frame" x="92" y="512" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Mjy-Wa-SWH" kind="modal" id="lws-ri-s7h"/>
+                                    <segue destination="Mjy-Wa-SWH" kind="modal" id="usO-ej-Vvf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GjW-Ko-fS5">
+                                <rect key="frame" x="48" y="142" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" minimumFontSize="17" id="4Hh-kt-gII">
+                                <rect key="frame" x="111" y="138" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ueP-Zb-QYC">
+                                <rect key="frame" x="159" y="142" width="16" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" minimumFontSize="17" id="D1P-xK-6lb">
+                                <rect key="frame" x="183" y="138" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SOq-4w-350">
+                                <rect key="frame" x="236" y="142" width="19" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lbs." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zhD-NB-xvS">
+                                <rect key="frame" x="236" y="202" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pkr-dX-XGe">
+                                <rect key="frame" x="48" y="268" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" minimumFontSize="17" id="9XJ-JF-iS4">
+                                <rect key="frame" x="183" y="264" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yrs." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sHR-PG-skF">
+                                <rect key="frame" x="236" y="268" width="28" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary Fitness Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HEc-Gl-FjD">
+                                <rect key="frame" x="80" y="316" width="160" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" id="3BF-UQ-BKr">
+                                <rect key="frame" x="0.0" y="326" width="314" height="138"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Gsv-Um-QJb" id="ZpV-Mm-X9k"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="ageField" destination="9XJ-JF-iS4" id="v1g-Kf-qyw"/>
                         <outlet property="continueButton" destination="hto-tT-F14" id="O7k-we-UlT"/>
+                        <outlet property="ftField" destination="4Hh-kt-gII" id="d4Q-9n-qPl"/>
+                        <outlet property="goalPicker" destination="3BF-UQ-BKr" id="i7L-DT-Of2"/>
+                        <outlet property="inField" destination="D1P-xK-6lb" id="k17-Tj-ZND"/>
                         <outlet property="weightField" destination="pue-uh-cUr" id="nfc-MM-LhZ"/>
                     </connections>
                 </viewController>
@@ -207,11 +285,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workouts" image="glyphicons-357-dumbbell.png" selectedImage="glyphicons-357-dumbbell.png" id="3P0-3J-X4h"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="glyphicons-357-dumbbell.png" id="3P0-3J-X4h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31v-qD-DDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466" y="1174"/>
+            <point key="canvasLocation" x="2343" y="859"/>
         </scene>
         <!--Progress-->
         <scene sceneID="7or-JX-XPu">
@@ -222,12 +300,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Progress" image="glyphicons-42-charts.png" selectedImage="glyphicons-42-charts.png" id="X6j-ae-KaN"/>
+                    <tabBarItem key="tabBarItem" title="Progress" image="glyphicons-42-charts.png" id="X6j-ae-KaN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxa-nJ-OdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="1536"/>
+            <point key="canvasLocation" x="1898" y="1546"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="E3t-eI-QS4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVw-Xl-KF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="T2c-b9-fDT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S1h-Tu-Mc3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="glyphicons-21-home.png" id="6pG-2l-yHi"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2343" y="1546"/>
         </scene>
         <!--Community-->
         <scene sceneID="3ft-R6-3Id">
@@ -238,12 +332,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Community" image="glyphicons-715-user-structure.png" selectedImage="glyphicons-715-user-structure.png" id="a8U-oN-kCS"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="glyphicons-715-user-structure.png" id="a8U-oN-kCS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmd-7a-Mwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="226"/>
+            <point key="canvasLocation" x="1903" y="234"/>
         </scene>
         <!--To-Do-->
         <scene sceneID="7VW-fH-0R1">
@@ -252,18 +346,28 @@
                     <view key="view" contentMode="scaleToFill" id="iWA-vy-ehI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b6y-1A-sYg">
+                                <rect key="frame" x="139" y="168" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="To-Do" image="glyphicons-40-notes.png" selectedImage="glyphicons-40-notes.png" id="Rfq-d0-Grd"/>
+                    <tabBarItem key="tabBarItem" title="To-Do" image="glyphicons-40-notes.png" id="Rfq-d0-Grd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHL-YU-CpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466" y="544"/>
+            <point key="canvasLocation" x="2343" y="234"/>
         </scene>
         <!--Main Tab Bar Screen-->
         <scene sceneID="xjJ-OK-ROY">
             <objects>
                 <tabBarController id="Mjy-Wa-SWH" customClass="MainTabBarScreen" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="PpG-RH-fec"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3sY-4q-kqN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -271,6 +375,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="T2c-b9-fDT" kind="relationship" relationship="viewControllers" id="ZLB-7z-XmJ"/>
                         <segue destination="hVN-aX-rxB" kind="relationship" relationship="viewControllers" id="4Fe-6R-ail"/>
                         <segue destination="thN-MC-mjo" kind="relationship" relationship="viewControllers" id="0I7-te-VZv"/>
                         <segue destination="waV-Te-lNw" kind="relationship" relationship="viewControllers" id="raS-o6-rm0"/>
@@ -279,7 +384,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVL-XJ-FAM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="858"/>
+            <point key="canvasLocation" x="1903" y="863"/>
         </scene>
         <!--Facebook Register Part1-->
         <scene sceneID="Npf-jZ-Pea">
@@ -330,6 +435,7 @@
     <resources>
         <image name="Facebook_Login_Button_Image.png" width="351" height="59"/>
         <image name="Splash_Screen.jpg" width="1300" height="866"/>
+        <image name="glyphicons-21-home.png" width="25" height="24"/>
         <image name="glyphicons-357-dumbbell.png" width="26" height="16"/>
         <image name="glyphicons-40-notes.png" width="20" height="25"/>
         <image name="glyphicons-42-charts.png" width="27" height="24"/>
