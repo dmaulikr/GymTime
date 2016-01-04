@@ -8,13 +8,10 @@
 [![Dependencies][dependencies-svg]][dependencies-link]
 [![References][references-svg]][references-link]
 
+[![Join Chat][gitter-svg]][gitter-link]
+
 A library that gives you access to the powerful Parse cloud platform from your iOS or OS X app.
 For more information Parse and its features, see [the website][parse.com] and [getting started][docs].
-
-## Other Parse Projects
-
- - [ParseUI for iOS][parseui-ios-link]
- - [Parse SDK for Android][android-sdk-link]
 
 ## Getting Started
 
@@ -33,8 +30,15 @@ And you're off! Take a look at the public [documentation][docs] and start buildi
 
  2. **Compiling for yourself**
 
-    If you want to manually compile the SDK, clone it locally, and run the following command in the root directory of the repository:
+    If you want to manually compile the SDK, clone it locally, and run the following commands in the root directory of the repository:
 
+        # To pull in extra dependencies (Bolts and OCMock)
+        git submodule update --init --recursive
+        
+        # To install all the gems
+        bundle install
+        
+        # Build & Package the Frameworks
         rake package:frameworks
 
     Compiled frameworks will be in 2 archives: `Parse-iOS.zip` and `Parse-OSX.zip` inside the `build/release` folder, and you can link them as you'd please.
@@ -54,6 +58,12 @@ We use the following libraries as dependencies inside of Parse:
  - [Bolts][bolts-framework], for task management.
  - [OCMock][ocmock-framework], for unit testing.
 
+## Other Parse Projects
+
+ - [ParseUI for iOS][parseui-link]
+ - [ParseFacebookUtils for iOS][parsefacebookutils-link]
+ - [ParseTwitterUtils for iOS][parsetwitterutils-link]
+
 ## License
 
 ```
@@ -69,8 +79,9 @@ of patent rights can be found in the PATENTS file in the same directory.
  [docs]: https://www.parse.com/docs/ios/guide
  [blog]: https://blog.parse.com/ 
 
- [parseui-ios-link]: https://github.com/ParsePlatform/ParseUI-iOS
- [android-sdk-link]: https://github.com/ParsePlatform/Parse-SDK-Android
+ [parseui-link]: https://github.com/ParsePlatform/ParseUI-iOS
+ [parsefacebookutils-link]: https://github.com/ParsePlatform/ParseFacebookUtils-iOS
+ [parsetwitterutils-link]: https://github.com/ParsePlatform/ParseTwitterUtils-iOS
  
  [releases]: https://github.com/ParsePlatform/Parse-SDK-iOS-OSX/releases
  [contributing]: https://github.com/ParsePlatform/Parse-SDK-iOS-OSX/blob/master/CONTRIBUTING.md
@@ -81,8 +92,8 @@ of patent rights can be found in the PATENTS file in the same directory.
  [build-status-svg]: https://travis-ci.org/ParsePlatform/Parse-SDK-iOS-OSX.svg
  [build-status-link]: https://travis-ci.org/ParsePlatform/Parse-SDK-iOS-OSX/branches
 
- [coverage-status-svg]: https://coveralls.io/repos/ParsePlatform/Parse-SDK-iOS-OSX/badge.svg?branch=master&service=github
- [coverage-status-link]: https://coveralls.io/github/ParsePlatform/Parse-SDK-iOS-OSX?branch=master
+ [coverage-status-svg]: https://img.shields.io/codecov/c/github/ParsePlatform/Parse-SDK-iOS-OSX/master.svg
+ [coverage-status-link]: https://codecov.io/github/ParsePlatform/Parse-SDK-iOS-OSX?branch=master
 
  [license-svg]: https://img.shields.io/badge/license-BSD-lightgrey.svg
  [license-link]: https://github.com/ParsePlatform/Parse-SDK-iOS-OSX/blob/master/LICENSE
@@ -97,3 +108,6 @@ of patent rights can be found in the PATENTS file in the same directory.
 
  [references-svg]: https://www.versioneye.com/objective-c/parse/reference_badge.svg
  [references-link]: https://www.versioneye.com/objective-c/parse/references
+
+ [gitter-svg]: https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg
+ [gitter-link]: https://gitter.im/ParsePlatform/Chat

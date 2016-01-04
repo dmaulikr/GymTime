@@ -10,6 +10,7 @@
 #import "PFRESTCommand.h"
 #import "PFRESTCommand_Private.h"
 
+#import "PFAssert.h"
 #import "PFCoreManager.h"
 #import "PFFieldOperation.h"
 #import "PFHTTPRequest.h"
@@ -135,7 +136,7 @@ static const int PFRESTCommandCacheKeyVersion = 1;
 
 #pragma mark Local Identifiers
 
-/*!
+/**
  If this was the second save on a new object while offline, then its objectId
  wasn't yet set when the command was created, so it would have been considered a
  "create". But if the first save succeeded, then there is an objectId now, and it
@@ -159,10 +160,8 @@ static const int PFRESTCommandCacheKeyVersion = 1;
             }
         }
 
-        if ([self.httpMethod isEqualToString:PFHTTPRequestMethodDELETE] && !objectId) {
-            [NSException raise:NSInternalInconsistencyException
-                        format:@"Attempt to delete non-existent object."];
-        }
+        PFConsistencyAssert(![self.httpMethod isEqualToString:PFHTTPRequestMethodDELETE] || objectId,
+                            @"Attempt to delete non-existent object.");
     }
 }
 

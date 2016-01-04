@@ -9,7 +9,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class BFTask;
+#import <Parse/PFConstants.h>
+
+@class BFTask PF_GENERIC(__covariant BFGenericType);
 @class PFFileManager;
 @class PFSQLiteDatabase;
 
@@ -31,8 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Opening
 ///--------------------------------------
 
-/*!
- @abstract Asynchronously opens a database connection to the database with the name specified.
+/**
+ Asynchronously opens a database connection to the database with the name specified.
  @note Only one database can be actively open at a time.
 
  @param name The name of the database to open.

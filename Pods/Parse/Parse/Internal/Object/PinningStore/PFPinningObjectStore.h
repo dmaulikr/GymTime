@@ -9,11 +9,14 @@
 
 #import <Foundation/Foundation.h>
 
+#import <Parse/PFConstants.h>
+
 #import "PFDataProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class BFTask;
+@class BFTask PF_GENERIC(__covariant BFGenericType);
+@class PFPin;
 
 @interface PFPinningObjectStore : NSObject
 
@@ -31,23 +34,23 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Pin
 ///--------------------------------------
 
-/*!
+/**
  Gets pin with name equals to given name.
 
  @param name Pin Name.
 
- @returns `BFTask` with `PFPin` result if pinning succeeds.
+ @return `BFTask` with `PFPin` result if pinning succeeds.
  */
 - (BFTask *)fetchPinAsyncWithName:(NSString *)name;
 
-/*!
+/**
  Pins given objects to the pin. Creates new pin if the pin with such name is not found.
 
  @param objects         Array of `PFObject`s to pin.
  @param name            Pin Name.
  @param includeChildren Whether children of `objects` should be pinned as well.
 
- @returns `BFTask` with `@YES` result.
+ @return `BFTask` with `@YES` result.
  */
 - (BFTask *)pinObjectsAsync:(nullable NSArray *)objects
                 withPinName:(NSString *)name
@@ -57,22 +60,22 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Unpin
 ///--------------------------------------
 
-/*!
+/**
  Unpins given array of objects from the pin.
 
  @param objects Objects to unpin.
  @param name    Pin name.
 
- @returns `BFTask` with `@YES` result.
+ @return `BFTask` with `@YES` result.
  */
 - (BFTask *)unpinObjectsAsync:(nullable NSArray *)objects withPinName:(NSString *)name;
 
-/*!
+/**
  Unpins all objects from the pin.
 
  @param name Pin name.
 
- @returns `BFTask` with `YES` result.
+ @return `BFTask` with `YES` result.
  */
 - (BFTask *)unpinAllObjectsAsyncWithPinName:(NSString *)name;
 

@@ -16,26 +16,28 @@
 @synthesize FacebookLoginButton, UsernameField,PasswordField,RegisterButton;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self checkIfLoggedIn];
+    [GetWorkouts updateWorkoutModel];
     [FacebookLoginButton addTarget:self action:@selector(clickedLoginButton) forControlEvents:UIControlEventTouchUpInside];
     
     
     [Parse setApplicationId:@"HaEsSyaNhlcUQEmxFcZMG7I9DZcPmKI6NmE8oo5D" clientKey:@"vGPIKjHWUclzh1Y4iw5jTP1g19TLvDZAmXi1jdZ7"];
     
-    [ViewController changeButtonStyle:RegisterButton NewColor:[UIColor turquoiseColor]];
+    [ViewController changeButtonStyle:RegisterButton NewColor:[UIColor turquoiseColor] ShadowColor:[UIColor greenSeaColor]];
     
     [ViewController changeTextFieldStyle:UsernameField NewColor:[UIColor whiteColor]];
     
     [ViewController changeTextFieldStyle:PasswordField NewColor:[UIColor whiteColor]];
-    
+    [ViewController changeButtonStyle:self.userLoginButton NewColor:[UIColor turquoiseColor] ShadowColor:[UIColor greenSeaColor]];
     // Do any additional setup after loading the view, typically from a nib.
     
 }
 
-+(void) changeButtonStyle:(FUIButton *) buttonToChangeStyle NewColor: (UIColor *) buttonColor  {
+
++(void) changeButtonStyle:(FUIButton *) buttonToChangeStyle NewColor: (UIColor *) buttonColor ShadowColor: (UIColor *) shadowColor {
     [buttonToChangeStyle setButtonColor:buttonColor];
     
-    [buttonToChangeStyle setShadowColor:[UIColor greenSeaColor]];
+    [buttonToChangeStyle setShadowColor:shadowColor];
     
     [buttonToChangeStyle setShadowHeight:3.0f];
     
@@ -47,7 +49,14 @@
     
     [buttonToChangeStyle setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
 }
-
+-(void) checkIfLoggedIn{
+    PFUser * currentUser = [PFUser currentUser];
+    if(currentUser){
+        [self performSegueWithIdentifier:@"loginSuccessfulSegue" sender:self];
+    }else{
+        NSLog(@"no logged in user");
+    }
+}
 +(void) changeTextFieldStyle : (FUITextField *) textFieldToChangeStyle NewColor: (UIColor *) buttonColor{
     
     textFieldToChangeStyle.font = [UIFont flatFontOfSize:16];
@@ -62,20 +71,16 @@
 -(void)clickedLoginButton{
     NSLog(@"clicked button");
     
-    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
-    [login
-     logInWithReadPermissions: @[@"public_profile"]
-     fromViewController:self
-     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-         if (error) {
-             NSLog(@"Process error");
-         } else if (result.isCancelled) {
-             NSLog(@"Cancelled");
-         } else {
-             NSLog(@"Logged in");
-             [self performSegueWithIdentifier:@"FacebookRegister" sender:self];
-         }
-     }];
+    [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"user_about_me", @"user_relationships", @"user_birthday"] block:^(PFUser *user, NSError *error) {
+        if (!user) {
+            NSLog(@"Uh oh. The user cancelled the Facebook login.");
+        } else if (user.isNew) {
+            NSLog(@"User signed up and logged in through Facebook!");
+            [self performSegueWithIdentifier:@"FacebookRegister" sender:self];
+        } else {
+            NSLog(@"User logged in through Facebook!");
+        }
+    }];
 
 }
 
@@ -86,4 +91,12 @@
 
 
 
+- (IBAction)loginAction:(id)sender {
+    [PFUser logInWithUsernameInBackground:self.UsernameField.text password:self.PasswordField.text block:^(PFUser * user, NSError * error){
+        if(user){
+            NSLog(@"User logged in");
+            [self performSegueWithIdentifier:@"loginSuccessfulSegue" sender:self];
+        }
+    }];
+}
 @end

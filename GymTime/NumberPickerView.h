@@ -10,10 +10,11 @@
 #import <UIKit/UIKit.h>
 @interface NumberPickerView : NSObject <UIPickerViewDelegate>
 {
-    int startingValue;
-    int endingValue;
+    @public int startingValue;
+    @public int endingValue;
+    @public int increment;
 }
 @property(nonatomic,strong) id<UIPickerViewDelegate>   delegate;
--(NumberPickerView *) initWithStartingValue: (int) startingVal endingVal: (int) endingVal;
+-(NumberPickerView *) initWithStartingValue: (int) startingVal endingVal: (int) endingVal increment: (int) inc;
 @end
 

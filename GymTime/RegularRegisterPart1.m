@@ -16,9 +16,9 @@
 @synthesize UsernameField, PasswordField,ContinueButton, FirstNameField, LastNameField, BackButton;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [ViewController changeButtonStyle:ContinueButton NewColor:[UIColor turquoiseColor]];
+    [ViewController changeButtonStyle:ContinueButton NewColor:[UIColor turquoiseColor] ShadowColor:[UIColor greenSeaColor]];
     
-    [ViewController changeButtonStyle:BackButton NewColor:[UIColor turquoiseColor]];
+    [ViewController changeButtonStyle:BackButton NewColor:[UIColor turquoiseColor] ShadowColor:[UIColor greenSeaColor]];
     
     [ViewController changeTextFieldStyle:UsernameField NewColor:[UIColor whiteColor]];
     [ViewController changeTextFieldStyle:FirstNameField NewColor:[UIColor whiteColor]];
@@ -43,9 +43,9 @@
 */
 
 - (IBAction)ContinueButton:(id)sender {
-    PFObject *userObject = [PFObject objectWithClassName:@"User"];
+    /*PFObject *userObject = [PFObject objectWithClassName:@"User"];
     userObject[@"Username"] = UsernameField.text;
     userObject[@"Password"] = PasswordField.text;
-    userObject[@"isFacebookLogin"] = @NO;
+    userObject[@"isFacebookLogin"] = @NO;*/
 }
 @end

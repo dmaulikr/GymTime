@@ -15,11 +15,12 @@
 
 @implementation NumberPickerView
 
--(NumberPickerView *) initWithStartingValue: (int) startingVal endingVal: (int) endingVal
+-(NumberPickerView *) initWithStartingValue: (int) startingVal endingVal: (int) endingVal increment: (int) inc
 {
     self = [super init];
     startingValue = startingVal;
     endingValue = endingVal;
+    increment = inc;
     return self;
 }
 // returns the number of 'columns' to display.
@@ -33,7 +34,7 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [[NSString alloc]initWithFormat:@"%i", (int)(row) + startingValue];
+    return [[NSString alloc]initWithFormat:@"%i",startingValue + (int)(row)*increment];
 }
 
 

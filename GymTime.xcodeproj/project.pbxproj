@@ -14,6 +14,13 @@
 		833B322C1C2B87CB007F0B72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 833B322B1C2B87CB007F0B72 /* Images.xcassets */; };
 		833B322F1C2B87CB007F0B72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833B322D1C2B87CB007F0B72 /* LaunchScreen.xib */; };
 		833B323B1C2B87CB007F0B72 /* GymTimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 833B323A1C2B87CB007F0B72 /* GymTimeTests.m */; };
+		83E349721C383657009D710D /* WorkoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E349711C383657009D710D /* WorkoutModel.m */; };
+		83E349761C38378E009D710D /* Exercises.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83E349751C38378E009D710D /* Exercises.plist */; };
+		83E349791C387571009D710D /* DisplayExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E349781C387571009D710D /* DisplayExerciseViewController.m */; };
+		83E3497C1C38E6FF009D710D /* FinishWorkoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E3497B1C38E6FF009D710D /* FinishWorkoutController.m */; };
+		83E3497E1C38EA7D009D710D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E3497D1C38EA7D009D710D /* star.png */; };
+		83E349801C38EBB7009D710D /* glyphicons-50-star.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E3497F1C38EBB7009D710D /* glyphicons-50-star.png */; };
+		83E349851C39B19E009D710D /* glyphicons-50-star-gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 83E349841C39B19E009D710D /* glyphicons-50-star-gold.png */; };
 		83EA8EF31C2C8C9F0093BDCA /* Splash_Screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83EA8EF21C2C8C9F0093BDCA /* Splash_Screen.jpg */; };
 		83EA8EF71C2C95600093BDCA /* FacebookRegisterPart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8EF61C2C95600093BDCA /* FacebookRegisterPart1.m */; };
 		83EA8EFA1C2C95700093BDCA /* RegularRegisterPart1.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8EF91C2C95700093BDCA /* RegularRegisterPart1.m */; };
@@ -27,6 +34,14 @@
 		83EA8F471C3475670093BDCA /* glyphicons-42-charts.png in Resources */ = {isa = PBXBuildFile; fileRef = 83EA8F461C3475670093BDCA /* glyphicons-42-charts.png */; };
 		83EA8F491C3475C50093BDCA /* glyphicons-715-user-structure.png in Resources */ = {isa = PBXBuildFile; fileRef = 83EA8F481C3475C50093BDCA /* glyphicons-715-user-structure.png */; };
 		83EA8F4E1C34D6FD0093BDCA /* glyphicons-21-home.png in Resources */ = {isa = PBXBuildFile; fileRef = 83EA8F4D1C34D6FD0093BDCA /* glyphicons-21-home.png */; };
+		83EA8F531C34DA6A0093BDCA /* ToDoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8F521C34DA6A0093BDCA /* ToDoController.m */; };
+		83EA8F561C34DA8D0093BDCA /* WorkoutsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8F551C34DA8D0093BDCA /* WorkoutsController.m */; };
+		83EA8F591C34DA9E0093BDCA /* ProgressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8F581C34DA9E0093BDCA /* ProgressController.m */; };
+		83EA8F5C1C34DAA80093BDCA /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8F5B1C34DAA80093BDCA /* HomeController.m */; };
+		83EA8F641C34DB150093BDCA /* CommunityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8F631C34DB150093BDCA /* CommunityController.m */; };
+		83EA8F681C3722650093BDCA /* GetWorkouts.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8F671C3722650093BDCA /* GetWorkouts.m */; };
+		83EA8F6C1C3728530093BDCA /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8F6B1C3728530093BDCA /* Workout.m */; };
+		83EA8F6F1C3728810093BDCA /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EA8F6E1C3728810093BDCA /* Exercise.m */; };
 		B7CAB28B79FAA471F6AAF38E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3E51104BF2447DB40BF6BB /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +70,16 @@
 		833B32341C2B87CB007F0B72 /* GymTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		833B32391C2B87CB007F0B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		833B323A1C2B87CB007F0B72 /* GymTimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GymTimeTests.m; sourceTree = "<group>"; };
+		83E349701C383657009D710D /* WorkoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutModel.h; sourceTree = "<group>"; };
+		83E349711C383657009D710D /* WorkoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutModel.m; sourceTree = "<group>"; };
+		83E349751C38378E009D710D /* Exercises.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Exercises.plist; sourceTree = "<group>"; };
+		83E349771C387571009D710D /* DisplayExerciseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayExerciseViewController.h; sourceTree = "<group>"; };
+		83E349781C387571009D710D /* DisplayExerciseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayExerciseViewController.m; sourceTree = "<group>"; };
+		83E3497A1C38E6FF009D710D /* FinishWorkoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishWorkoutController.h; sourceTree = "<group>"; };
+		83E3497B1C38E6FF009D710D /* FinishWorkoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishWorkoutController.m; sourceTree = "<group>"; };
+		83E3497D1C38EA7D009D710D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		83E3497F1C38EBB7009D710D /* glyphicons-50-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-50-star.png"; sourceTree = "<group>"; };
+		83E349841C39B19E009D710D /* glyphicons-50-star-gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-50-star-gold.png"; sourceTree = "<group>"; };
 		83EA8EF21C2C8C9F0093BDCA /* Splash_Screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splash_Screen.jpg; sourceTree = "<group>"; };
 		83EA8EF51C2C95600093BDCA /* FacebookRegisterPart1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookRegisterPart1.h; sourceTree = "<group>"; };
 		83EA8EF61C2C95600093BDCA /* FacebookRegisterPart1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookRegisterPart1.m; sourceTree = "<group>"; };
@@ -74,6 +99,22 @@
 		83EA8F461C3475670093BDCA /* glyphicons-42-charts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-42-charts.png"; sourceTree = "<group>"; };
 		83EA8F481C3475C50093BDCA /* glyphicons-715-user-structure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-715-user-structure.png"; sourceTree = "<group>"; };
 		83EA8F4D1C34D6FD0093BDCA /* glyphicons-21-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-21-home.png"; sourceTree = "<group>"; };
+		83EA8F511C34DA6A0093BDCA /* ToDoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoController.h; sourceTree = "<group>"; };
+		83EA8F521C34DA6A0093BDCA /* ToDoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoController.m; sourceTree = "<group>"; };
+		83EA8F541C34DA8D0093BDCA /* WorkoutsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutsController.h; sourceTree = "<group>"; };
+		83EA8F551C34DA8D0093BDCA /* WorkoutsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutsController.m; sourceTree = "<group>"; };
+		83EA8F571C34DA9E0093BDCA /* ProgressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressController.h; sourceTree = "<group>"; };
+		83EA8F581C34DA9E0093BDCA /* ProgressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressController.m; sourceTree = "<group>"; };
+		83EA8F5A1C34DAA80093BDCA /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		83EA8F5B1C34DAA80093BDCA /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		83EA8F621C34DB150093BDCA /* CommunityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunityController.h; sourceTree = "<group>"; };
+		83EA8F631C34DB150093BDCA /* CommunityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommunityController.m; sourceTree = "<group>"; };
+		83EA8F661C3722650093BDCA /* GetWorkouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetWorkouts.h; sourceTree = "<group>"; };
+		83EA8F671C3722650093BDCA /* GetWorkouts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetWorkouts.m; sourceTree = "<group>"; };
+		83EA8F6A1C3728530093BDCA /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
+		83EA8F6B1C3728530093BDCA /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		83EA8F6D1C3728810093BDCA /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		83EA8F6E1C3728810093BDCA /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
 		D553E3DCCC8FC66185ABA1ED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FA3E51104BF2447DB40BF6BB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,7 +169,8 @@
 		833B321D1C2B87CB007F0B72 /* GymTime */ = {
 			isa = PBXGroup;
 			children = (
-				83EA8F3D1C34513B0093BDCA /* MainTabBarScreen */,
+				83EA8F691C37226C0093BDCA /* GetWorkouts */,
+				83EA8F501C34DA3C0093BDCA /* MainTabBarController */,
 				83EA8F361C32522B0093BDCA /* HeightDelegates */,
 				83EA8F321C2E00290093BDCA /* ParseActions */,
 				83EA8EF41C2C953C0093BDCA /* RegisterControllers */,
@@ -150,6 +192,7 @@
 				83EA8EF11C2C8C7C0093BDCA /* Resources */,
 				833B321F1C2B87CB007F0B72 /* Info.plist */,
 				833B32201C2B87CB007F0B72 /* main.m */,
+				83E349751C38378E009D710D /* Exercises.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -174,6 +217,7 @@
 		83EA8EF11C2C8C7C0093BDCA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				83E3497D1C38EA7D009D710D /* star.png */,
 				83EA8F411C3474A50093BDCA /* Glyphicons */,
 				83EA8EFE1C2DDAB50093BDCA /* Facebook_Login_Button_Image.png */,
 				83EA8EF21C2C8C9F0093BDCA /* Splash_Screen.jpg */,
@@ -212,7 +256,34 @@
 			name = HeightDelegates;
 			sourceTree = "<group>";
 		};
-		83EA8F3D1C34513B0093BDCA /* MainTabBarScreen */ = {
+		83EA8F411C3474A50093BDCA /* Glyphicons */ = {
+			isa = PBXGroup;
+			children = (
+				83E349841C39B19E009D710D /* glyphicons-50-star-gold.png */,
+				83E3497F1C38EBB7009D710D /* glyphicons-50-star.png */,
+				83EA8F4D1C34D6FD0093BDCA /* glyphicons-21-home.png */,
+				83EA8F481C3475C50093BDCA /* glyphicons-715-user-structure.png */,
+				83EA8F461C3475670093BDCA /* glyphicons-42-charts.png */,
+				83EA8F441C3475220093BDCA /* glyphicons-357-dumbbell.png */,
+				83EA8F421C3474B60093BDCA /* glyphicons-40-notes.png */,
+			);
+			name = Glyphicons;
+			sourceTree = "<group>";
+		};
+		83EA8F501C34DA3C0093BDCA /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8F611C34DAE50093BDCA /* HomeController */,
+				83EA8F5E1C34DAC00093BDCA /* ToDoController */,
+				83EA8F5F1C34DACC0093BDCA /* WorkoutController */,
+				83EA8F601C34DAD40093BDCA /* ProgressController */,
+				83EA8F651C34DB180093BDCA /* CommunityController */,
+				83EA8F5D1C34DAB20093BDCA /* MainTabBarScreen */,
+			);
+			name = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		83EA8F5D1C34DAB20093BDCA /* MainTabBarScreen */ = {
 			isa = PBXGroup;
 			children = (
 				83EA8F3E1C3451670093BDCA /* MainTabBarScreen.h */,
@@ -221,16 +292,68 @@
 			name = MainTabBarScreen;
 			sourceTree = "<group>";
 		};
-		83EA8F411C3474A50093BDCA /* Glyphicons */ = {
+		83EA8F5E1C34DAC00093BDCA /* ToDoController */ = {
 			isa = PBXGroup;
 			children = (
-				83EA8F4D1C34D6FD0093BDCA /* glyphicons-21-home.png */,
-				83EA8F481C3475C50093BDCA /* glyphicons-715-user-structure.png */,
-				83EA8F461C3475670093BDCA /* glyphicons-42-charts.png */,
-				83EA8F441C3475220093BDCA /* glyphicons-357-dumbbell.png */,
-				83EA8F421C3474B60093BDCA /* glyphicons-40-notes.png */,
+				83EA8F511C34DA6A0093BDCA /* ToDoController.h */,
+				83EA8F521C34DA6A0093BDCA /* ToDoController.m */,
+				83E349771C387571009D710D /* DisplayExerciseViewController.h */,
+				83E349781C387571009D710D /* DisplayExerciseViewController.m */,
+				83E3497A1C38E6FF009D710D /* FinishWorkoutController.h */,
+				83E3497B1C38E6FF009D710D /* FinishWorkoutController.m */,
 			);
-			name = Glyphicons;
+			name = ToDoController;
+			sourceTree = "<group>";
+		};
+		83EA8F5F1C34DACC0093BDCA /* WorkoutController */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8F541C34DA8D0093BDCA /* WorkoutsController.h */,
+				83EA8F551C34DA8D0093BDCA /* WorkoutsController.m */,
+			);
+			name = WorkoutController;
+			sourceTree = "<group>";
+		};
+		83EA8F601C34DAD40093BDCA /* ProgressController */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8F571C34DA9E0093BDCA /* ProgressController.h */,
+				83EA8F581C34DA9E0093BDCA /* ProgressController.m */,
+			);
+			name = ProgressController;
+			sourceTree = "<group>";
+		};
+		83EA8F611C34DAE50093BDCA /* HomeController */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8F5A1C34DAA80093BDCA /* HomeController.h */,
+				83EA8F5B1C34DAA80093BDCA /* HomeController.m */,
+			);
+			name = HomeController;
+			sourceTree = "<group>";
+		};
+		83EA8F651C34DB180093BDCA /* CommunityController */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8F621C34DB150093BDCA /* CommunityController.h */,
+				83EA8F631C34DB150093BDCA /* CommunityController.m */,
+			);
+			name = CommunityController;
+			sourceTree = "<group>";
+		};
+		83EA8F691C37226C0093BDCA /* GetWorkouts */ = {
+			isa = PBXGroup;
+			children = (
+				83EA8F661C3722650093BDCA /* GetWorkouts.h */,
+				83EA8F671C3722650093BDCA /* GetWorkouts.m */,
+				83EA8F6A1C3728530093BDCA /* Workout.h */,
+				83EA8F6B1C3728530093BDCA /* Workout.m */,
+				83EA8F6D1C3728810093BDCA /* Exercise.h */,
+				83EA8F6E1C3728810093BDCA /* Exercise.m */,
+				83E349701C383657009D710D /* WorkoutModel.h */,
+				83E349711C383657009D710D /* WorkoutModel.m */,
+			);
+			name = GetWorkouts;
 			sourceTree = "<group>";
 		};
 		D08CFCA60FABD3A4ED6DB732 /* Pods */ = {
@@ -329,12 +452,16 @@
 				83EA8F451C3475220093BDCA /* glyphicons-357-dumbbell.png in Resources */,
 				83EA8F491C3475C50093BDCA /* glyphicons-715-user-structure.png in Resources */,
 				83EA8EFF1C2DDAB50093BDCA /* Facebook_Login_Button_Image.png in Resources */,
+				83E349801C38EBB7009D710D /* glyphicons-50-star.png in Resources */,
 				83EA8F431C3474B60093BDCA /* glyphicons-40-notes.png in Resources */,
+				83E3497E1C38EA7D009D710D /* star.png in Resources */,
 				833B322A1C2B87CB007F0B72 /* Main.storyboard in Resources */,
 				833B322F1C2B87CB007F0B72 /* LaunchScreen.xib in Resources */,
 				83EA8F4E1C34D6FD0093BDCA /* glyphicons-21-home.png in Resources */,
+				83E349851C39B19E009D710D /* glyphicons-50-star-gold.png in Resources */,
 				83EA8EF31C2C8C9F0093BDCA /* Splash_Screen.jpg in Resources */,
 				833B322C1C2B87CB007F0B72 /* Images.xcassets in Resources */,
+				83E349761C38378E009D710D /* Exercises.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,15 +527,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EA8F591C34DA9E0093BDCA /* ProgressController.m in Sources */,
+				83EA8F681C3722650093BDCA /* GetWorkouts.m in Sources */,
 				83EA8F401C3451670093BDCA /* MainTabBarScreen.m in Sources */,
 				833B32271C2B87CB007F0B72 /* ViewController.m in Sources */,
+				83E3497C1C38E6FF009D710D /* FinishWorkoutController.m in Sources */,
 				83EA8EF71C2C95600093BDCA /* FacebookRegisterPart1.m in Sources */,
+				83EA8F6F1C3728810093BDCA /* Exercise.m in Sources */,
 				83EA8F3C1C32553D0093BDCA /* NumberPickerView.m in Sources */,
 				83EA8EFD1C2CBFB10093BDCA /* GetUserStatistics.m in Sources */,
+				83EA8F561C34DA8D0093BDCA /* WorkoutsController.m in Sources */,
 				83EA8EFA1C2C95700093BDCA /* RegularRegisterPart1.m in Sources */,
 				83EA8F341C2E00570093BDCA /* CheckParseDatabase.m in Sources */,
+				83EA8F641C34DB150093BDCA /* CommunityController.m in Sources */,
+				83E349791C387571009D710D /* DisplayExerciseViewController.m in Sources */,
+				83EA8F5C1C34DAA80093BDCA /* HomeController.m in Sources */,
+				83EA8F531C34DA6A0093BDCA /* ToDoController.m in Sources */,
 				833B32241C2B87CB007F0B72 /* AppDelegate.m in Sources */,
+				83E349721C383657009D710D /* WorkoutModel.m in Sources */,
 				833B32211C2B87CB007F0B72 /* main.m in Sources */,
+				83EA8F6C1C3728530093BDCA /* Workout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

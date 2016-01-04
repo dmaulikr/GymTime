@@ -11,12 +11,16 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Parse/Parse.h>
 #import <FlatUIKit/FlatUIKit.h>
+#import "GetWorkouts.h"
+#import <SSKeychain/SSKeychain.h>
+#import <ParseUI/ParseUI.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 
 @interface ViewController : UIViewController
 {
 
 }
-+(void) changeButtonStyle:(FUIButton *) buttonToChangeStyle NewColor: (UIColor *) Color;
++(void) changeButtonStyle:(FUIButton *) buttonToChangeStyle NewColor: (UIColor *) buttonColor ShadowColor: (UIColor *) shadowColor;
 
 +(void) changeTextFieldStyle : (FUITextField *) textFieldToChangeStyle NewColor: (UIColor *) Color;
 
@@ -28,6 +32,9 @@
 @property (weak, nonatomic) IBOutlet FUITextField *UsernameField;
 @property (weak, nonatomic) IBOutlet FUITextField *PasswordField;
 @property (weak, nonatomic) IBOutlet FUIButton *RegisterButton;
+@property (weak, nonatomic) IBOutlet FUIButton *userLoginButton;
+@property (weak, nonatomic) IBOutlet FUIButton *loginUser;
+- (IBAction)loginAction:(id)sender;
 
 @end
 

@@ -14,7 +14,8 @@
 #import "PFDataProvider.h"
 
 @class BFCancellationToken;
-@class BFTask;
+@class BFTask PF_GENERIC(__covariant BFGenericType);
+@class PFCommandResult;
 @class PFRESTCommand;
 @protocol PFNetworkCommand;
 
@@ -50,25 +51,25 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Data Commands
 ///--------------------------------------
 
-/*!
+/**
  Run command.
 
  @param command   Command to run.
  @param options   Options to use to run command.
 
- @returns `BFTask` with result set to `PFCommandResult`.
+ @return `BFTask` with result set to `PFCommandResult`.
  */
 - (BFTask *)runCommandAsync:(PFRESTCommand *)command
                 withOptions:(PFCommandRunningOptions)options;
 
-/*!
+/**
  Run command.
 
  @param command           Command to run.
  @param options           Options to use to run command.
  @param cancellationToken Operation to use as a cancellation token.
 
- @returns `BFTask` with result set to `PFCommandResult`.
+ @return `BFTask` with result set to `PFCommandResult`.
  */
 - (BFTask *)runCommandAsync:(PFRESTCommand *)command
                 withOptions:(PFCommandRunningOptions)options

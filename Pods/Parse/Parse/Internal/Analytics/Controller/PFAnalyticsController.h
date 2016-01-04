@@ -9,47 +9,50 @@
 
 #import <Foundation/Foundation.h>
 
-@class BFTask;
-@class PFEventuallyQueue;
+#import <Parse/PFConstants.h>
+
+#import "PFDataProvider.h"
+
+@class BFTask PF_GENERIC(__covariant BFGenericType);
 
 @interface PFAnalyticsController : NSObject
 
-@property (nonatomic, strong, readonly) PFEventuallyQueue *eventuallyQueue;
+@property (nonatomic, weak, readonly) id<PFEventuallyQueueProvider> dataSource;
 
 ///--------------------------------------
 /// @name Init
 ///--------------------------------------
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithEventuallyQueue:(PFEventuallyQueue *)eventuallyQueue NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDataSource:(id<PFEventuallyQueueProvider>)dataSource NS_DESIGNATED_INITIALIZER;
 
-+ (instancetype)controllerWithEventuallyQueue:(PFEventuallyQueue *)eventuallyQueue;
++ (instancetype)controllerWithDataSource:(id<PFEventuallyQueueProvider>)dataSource;
 
 ///--------------------------------------
 /// @name Track Event
 ///--------------------------------------
 
-/*!
- @abstract Tracks this application being launched. If this happened as the result of the
+/**
+ Tracks this application being launched. If this happened as the result of the
  user opening a push notification, this method sends along information to
  correlate this open with that push.
 
  @param payload      The Remote Notification payload.
  @param sessionToken Current user session token.
 
- @returns `BFTask` with result set to `@YES`.
+ @return `BFTask` with result set to `@YES`.
  */
 - (BFTask *)trackAppOpenedEventAsyncWithRemoteNotificationPayload:(NSDictionary *)payload
                                                      sessionToken:(NSString *)sessionToken;
 
-/*!
- @abstract Tracks the occurrence of a custom event with additional dimensions.
+/**
+ Tracks the occurrence of a custom event with additional dimensions.
 
  @param name         Event name.
  @param dimensions   `NSDictionary` of information by which to segment this event.
  @param sessionToken Current user session token.
 
- @returns `BFTask` with result set to `@YES`.
+ @return `BFTask` with result set to `@YES`.
  */
 - (BFTask *)trackEventAsyncWithName:(NSString *)name
                          dimensions:(NSDictionary *)dimensions

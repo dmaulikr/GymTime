@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [ViewController changeTextFieldStyle:UsernameField NewColor:[UIColor whiteColor]];
-    [ViewController changeButtonStyle:ContinueButton NewColor:[UIColor turquoiseColor]];
+    [ViewController changeButtonStyle:ContinueButton NewColor:[UIColor turquoiseColor] ShadowColor:[UIColor greenSeaColor]];
     
     // Do any additional setup after loading the view.
 }

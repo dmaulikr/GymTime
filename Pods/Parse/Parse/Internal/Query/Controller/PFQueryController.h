@@ -9,12 +9,16 @@
 
 #import <Foundation/Foundation.h>
 
+#import <Parse/PFConstants.h>
+
 #import "PFDataProvider.h"
 
 @class BFCancellationToken;
-@class BFTask;
+
+@class BFTask PF_GENERIC(__covariant BFGenericType);
 @class PFQueryState;
 @class PFRESTCommand;
+@class PFCommandResult;
 @class PFUser;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -36,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Find
 ///--------------------------------------
 
-/*!
+/**
  Finds objects from network or LDS for any given query state.
  Supports cancellation and ACLed changes for a specific user.
 
@@ -44,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param cancellationToken Cancellation token or `nil`.
  @param user              `user` to use for ACLs or `nil`.
 
- @returns Task that resolves to `NSArray` of `PFObject`s.
+ @return Task that resolves to `NSArray` of `PFObject`s.
  */
 - (BFTask *)findObjectsAsyncForQueryState:(PFQueryState *)queryState
                     withCancellationToken:(nullable BFCancellationToken *)cancellationToken
@@ -54,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Count
 ///--------------------------------------
 
-/*!
+/**
  Counts objects from network or LDS for any given query state.
  Supports cancellation and ACLed changes for a specific user.
 
@@ -62,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param cancellationToken Cancellation token or `nil`.
  @param user              `user` to use for ACLs or `nil`.
 
- @returns Task that resolves to `NSNumber` with a count of results.
+ @return Task that resolves to `NSNumber` with a count of results.
  */
 - (BFTask *)countObjectsAsyncForQueryState:(PFQueryState *)queryState
                      withCancellationToken:(nullable BFCancellationToken *)cancellationToken
@@ -82,14 +86,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol PFQueryControllerSubclass <NSObject>
 
-/*!
+/**
  Implementation should run a command on a network runner.
 
  @param command           Command to run.
  @param cancellationToken Cancellation token.
  @param queryState        Query state to run command for.
 
- @returns `BFTask` instance with result of `PFCommandResult`.
+ @return `BFTask` instance with result of `PFCommandResult`.
  */
 - (BFTask *)runNetworkCommandAsync:(PFRESTCommand *)command
              withCancellationToken:(nullable BFCancellationToken *)cancellationToken
