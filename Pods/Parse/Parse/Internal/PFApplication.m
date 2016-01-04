@@ -9,9 +9,9 @@
 
 #import "PFApplication.h"
 
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS
 #import <UIKit/UIKit.h>
-#elif PF_TARGET_OS_OSX
+#elif !TARGET_OS_WATCH && TARGET_OS_MAC
 #import <AppKit/AppKit.h>
 #endif
 
@@ -47,11 +47,11 @@
 }
 
 - (NSInteger)iconBadgeNumber {
-#if TARGET_OS_WATCH || TARGET_OS_TV
+#if TARGET_OS_WATCH
     return 0;
 #elif TARGET_OS_IOS
     return self.systemApplication.applicationIconBadgeNumber;
-#elif PF_TARGET_OS_OSX
+#elif TARGET_OS_MAC
     // Make sure not to use `NSApp` here, because it doesn't work sometimes,
     // `NSApplication +sharedApplication` does though.
     NSString *badgeLabel = [[NSApplication sharedApplication] dockTile].badgeLabel;
@@ -75,7 +75,7 @@
     if (self.iconBadgeNumber != iconBadgeNumber) {
 #if TARGET_OS_IOS
         self.systemApplication.applicationIconBadgeNumber = iconBadgeNumber;
-#elif PF_TARGET_OS_OSX
+#elif !TARGET_OS_WATCH
         [[NSApplication sharedApplication] dockTile].badgeLabel = [@(iconBadgeNumber) stringValue];
 #endif
     }

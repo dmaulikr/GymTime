@@ -417,6 +417,7 @@
 				TargetAttributes = {
 					833B321A1C2B87CB007F0B72 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = QM3RA5QCNR;
 					};
 					833B32331C2B87CB007F0B72 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -675,9 +676,12 @@
 			baseConfigurationReference = D553E3DCCC8FC66185ABA1ED /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GymTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -686,9 +690,12 @@
 			baseConfigurationReference = 082E37359E975D465FC90526 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = GymTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

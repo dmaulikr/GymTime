@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FBSDKShareKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FlatUIKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -35,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>ParseFacebookUtilsV4.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ParseTwitterUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,17 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0684FD6077089D9FF7AA78D555BD438F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3D417356AB9DCA5B17565C7420759161</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>4E286D373D75563CE26E479A68203892</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5366B7F679CF2BA31EA583EA35CA2D90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B53DF583949C0313F8655A28EF6EB07D</key>
+		<key>C23ED5745D9080D298B666A7BF2C29C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,6 +83,11 @@
 			<true/>
 		</dict>
 		<key>DBDDB4FFB08B9CE13C3842D452303563</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E515E7248A3DA405CC7A560EA5712A7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -32,20 +32,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSLog(@"navigating away");
+    if([[segue destinationViewController] isKindOfClass:[GetUserStatistics class]]){
+        GetUserStatistics * destination = (GetUserStatistics *)[segue destinationViewController];
+        destination->emailAddress = self.UsernameField.text;
+        destination->firstName = self.FirstNameField.text;
+        destination->lastName = self.LastNameField.text;
+        destination->password = self.PasswordField.text;
+        destination->isFacebookLogin = NO;
+    }
 }
-*/
+
 
 - (IBAction)ContinueButton:(id)sender {
     /*PFObject *userObject = [PFObject objectWithClassName:@"User"];
     userObject[@"Username"] = UsernameField.text;
     userObject[@"Password"] = PasswordField.text;
     userObject[@"isFacebookLogin"] = @NO;*/
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return NO;
 }
 @end

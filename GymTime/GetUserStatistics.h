@@ -12,9 +12,7 @@
 #import "RegularRegisterPart1.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKShareKit/FBSDKShareKit.h>
 #import <CommonCrypto/CommonDigest.h>
-#import <SSKeychain/SSKeychain.h>
 @interface GetUserStatistics : UIViewController <UIPickerViewDelegate>
 {
     int weight;

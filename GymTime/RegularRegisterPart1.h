@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "GetUserStatistics.h"
 
-@interface RegularRegisterPart1 : UIViewController
-@property (weak, nonatomic) IBOutlet FUITextField *UsernameField;
-@property (weak, nonatomic) IBOutlet FUITextField *PasswordField;
+@interface RegularRegisterPart1 : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet FUITextField *UsernameField;
+@property (strong, nonatomic) IBOutlet FUITextField *PasswordField;
 - (IBAction)ContinueButton:(id)sender;
 @property (weak, nonatomic) IBOutlet FUIButton *ContinueButton;
-@property (weak, nonatomic) IBOutlet FUITextField *FirstNameField;
-@property (weak, nonatomic) IBOutlet FUITextField *LastNameField;
+@property (strong, nonatomic) IBOutlet FUITextField *FirstNameField;
+@property (strong, nonatomic) IBOutlet FUITextField *LastNameField;
 @property (weak, nonatomic) IBOutlet FUIButton *BackButton;
 
 @end

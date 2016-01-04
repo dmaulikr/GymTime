@@ -16,29 +16,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if ([FBSDKAccessToken currentAccessToken]) {
-        FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"/me" parameters:@{ @"fields": @"id,first_name,last_name,email"}
-            HTTPMethod:@"GET"];
-        [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
-                                              id result,
-                                              NSError *error) {
-            if(result){
-                emailAddress = result[@"email"];
-                firstName = result[@"first_name"];
-                lastName = result[@"last_name"];
-                password = [GetUserStatistics generateRandomSalt];
-                NSLog(@"%@,%@,%@",emailAddress,firstName,lastName);
-            }else{
-                NSLog(@"Experienced error: %@", error);
-            }
-            // Handle the result
-        }];
+    if(isFacebookLogin){
+        if ([FBSDKAccessToken currentAccessToken]) {
+            FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"/me" parameters:@{ @"fields": @"id,first_name,last_name,email"}
+                HTTPMethod:@"GET"];
+            [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection,
+                                                  id result,
+                                                  NSError *error) {
+                if(result){
+                    emailAddress = result[@"email"];
+                    firstName = result[@"first_name"];
+                    lastName = result[@"last_name"];
+                    password = [GetUserStatistics generateRandomSalt];
+                    NSLog(@"%@,%@,%@",emailAddress,firstName,lastName);
+                }else{
+                    NSLog(@"Experienced error: %@", error);
+                }
+                // Handle the result
+            }];
 
+        }
     }
-    else{
-        NSLog(@"no sess");
-    }
-    
+
     [self setGoals:[[NSArray alloc]initWithObjects:@"Weight Loss",@"Lean Muscle", @"General Fitness", @"Athletic training", nil]];
     
     [self.goalPicker selectRow:2 inComponent:0 animated:NO];
@@ -144,6 +143,7 @@
 }
 - (IBAction)submitUserData:(id)sender {
     __block PFUser * user = [PFUser user];
+    NSLog(@"username:%@", emailAddress);
     user.username = emailAddress;
     user.password = password;
     user.email = emailAddress;
@@ -158,12 +158,15 @@
         [userQuery findObjectsInBackgroundWithBlock:^(NSArray * objects, NSError * error){
             if(!error){
                 if([objects count] == 1){
+                    NSLog(@"before fbuser");
                     PFUser * fbUser = [objects objectAtIndex:0];
                     fbUser[@"height"] = user[@"height"];
                     fbUser[@"weight"] = user[@"weight"];
                     fbUser[@"age"] = user[@"age"];
-                    user[@"fitnessGoal"] = user[@"fitnessGoal"];
+                    fbUser[@"fitnessGoal"] = user[@"fitnessGoal"];
+                    NSLog(@"before save");
                     [fbUser saveInBackground];
+                    NSLog(@"after save");
                 }else{
                     NSLog(@"major error here");
                 }
@@ -203,17 +206,6 @@
     return [s copy];
 }
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([sender isKindOfClass:[RegularRegisterPart1 class]]){
-        RegularRegisterPart1 * sourceController = (RegularRegisterPart1 *)sender;
-        self->emailAddress = sourceController.UsernameField.text;
-        self->firstName = sourceController.FirstNameField.text;
-        self->lastName = sourceController.LastNameField.text;
-        self->password = sourceController.PasswordField.text;
-        isFacebookLogin = NO;
-    }
-    if([sender isKindOfClass:[ViewController class]]){
-        isFacebookLogin = YES;
-    }
 }
 
 

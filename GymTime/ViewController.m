@@ -14,9 +14,12 @@
 
 @implementation ViewController
 @synthesize FacebookLoginButton, UsernameField,PasswordField,RegisterButton;
+-(void) viewDidAppear:(BOOL)animated{
+    [self checkIfLoggedIn];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self checkIfLoggedIn];
+    
     [GetWorkouts updateWorkoutModel];
     [FacebookLoginButton addTarget:self action:@selector(clickedLoginButton) forControlEvents:UIControlEventTouchUpInside];
     
@@ -71,9 +74,9 @@
 -(void)clickedLoginButton{
     NSLog(@"clicked button");
     
-    [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"user_about_me", @"user_relationships", @"user_birthday"] block:^(PFUser *user, NSError *error) {
+    [PFFacebookUtils logInInBackgroundWithReadPermissions:@[] block:^(PFUser *user, NSError *error) {
         if (!user) {
-            NSLog(@"Uh oh. The user cancelled the Facebook login.");
+            NSLog(@"Uh oh. The user cancelled the Facebook login. Error: %@", error);
         } else if (user.isNew) {
             NSLog(@"User signed up and logged in through Facebook!");
             [self performSegueWithIdentifier:@"FacebookRegister" sender:self];
@@ -98,5 +101,17 @@
             [self performSegueWithIdentifier:@"loginSuccessfulSegue" sender:self];
         }
     }];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue destinationViewController] isKindOfClass:[GetUserStatistics class]]){
+        GetUserStatistics * destination = (GetUserStatistics *) [segue destinationViewController];
+        destination->isFacebookLogin = YES;
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return NO;
 }
 @end

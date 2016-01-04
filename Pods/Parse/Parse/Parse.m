@@ -25,8 +25,11 @@
 #import "PFLogging.h"
 #import "PFObjectSubclassingController.h"
 
-#if !TARGET_OS_WATCH && !TARGET_OS_TV
+#if !TARGET_OS_WATCH
 #import "PFInstallationPrivate.h"
+#if TARGET_OS_IOS
+#import "PFProduct+Private.h"
+#endif
 #endif
 
 #import "PFCategoryLoader.h"
@@ -75,11 +78,11 @@ static NSString *containingApplicationBundleIdentifier_;
     [subclassingController registerSubclass:[PFRole class]];
     [subclassingController registerSubclass:[PFPin class]];
     [subclassingController registerSubclass:[PFEventuallyPin class]];
-#if !TARGET_OS_WATCH && !TARGET_OS_TV
+#if !TARGET_OS_WATCH
     [subclassingController registerSubclass:[PFInstallation class]];
-#endif
-#if TARGET_OS_IOS || TARGET_OS_TV
+#if TARGET_OS_IOS
     [subclassingController registerSubclass:[PFProduct class]];
+#endif
 #endif
 
 #if TARGET_OS_IOS

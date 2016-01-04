@@ -11,8 +11,6 @@
 
 #import <Parse/PFConstants.h>
 
-PF_WATCH_UNAVAILABLE_WARNING
-
 @class PFReachability;
 
 NS_ASSUME_NONNULL_BEGIN
